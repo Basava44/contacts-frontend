@@ -1,0 +1,29 @@
+<div class="navbar shadow-md">
+  <div class="header text-xl cursor-pointer" routerLink="/">My Contacts</div>
+  <div class="buttons">
+    <button
+      type="button"
+      class="mx-2 px-3 py-2 text-s font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+      (click)="logIn()"
+      *ngIf="!userLoggedIn"
+    >
+      Login
+    </button>
+    <button
+      type="button"
+      class="mx-2 px-3 py-2 text-s font-medium text-center text-black rounded-lg border"
+      (click)="signUp()"
+      *ngIf="!userLoggedIn"
+    >
+      Signup
+    </button>
+    <button
+      *ngIf="userLoggedIn"
+      type="button"
+      class="mx-2 px-3 py-2 text-s font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+      (click)="logout()"
+    >
+      Logout
+    </button>
+  </div>
+</div>
