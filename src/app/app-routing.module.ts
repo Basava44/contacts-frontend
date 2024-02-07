@@ -6,6 +6,7 @@ import { SignupComponent } from './signup/signup.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { AddContactComponent } from './add-contact/add-contact.component';
 import { AuthGuardService } from './auth-guard.service';
+import { EditContactComponent } from './edit-contact/edit-contact.component';
 
 const routes: Routes = [
   {
@@ -28,6 +29,11 @@ const routes: Routes = [
   {
     path: 'addContact',
     component: AddContactComponent,
+    canActivate: [AuthGuardService],
+  },
+  {
+    path: 'editContact',
+    component: EditContactComponent,
     canActivate: [AuthGuardService],
   },
 ];

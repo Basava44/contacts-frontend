@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { Action, Select, State, StateContext } from '@ngxs/store';
 import {
   clearData,
+  editContact,
   setLogIn,
   setUserDetails,
   userDetails,
@@ -14,6 +15,7 @@ import {
     id: '',
     isLoggedIn: false,
     username: '',
+    editableContactData: {},
   },
 })
 @Injectable()
@@ -54,6 +56,19 @@ export class loggedUserDetails {
       id: '',
       isLoggedIn: false,
       username: '',
+      editableContactData: {},
+    });
+  }
+
+  @Action(editContact)
+  setEditContactData(
+    { getState, setState }: StateContext<userDetails>,
+    { payload }: any
+  ) {
+    let state = getState();
+    setState({
+      ...state,
+      editableContactData: payload,
     });
   }
 }

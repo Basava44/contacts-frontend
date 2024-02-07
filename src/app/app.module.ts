@@ -20,6 +20,7 @@ import { LoaderComponent } from './loader/loader.component';
 import { loggedUserDetails } from './store-utilities/user.state';
 import { NgxsModule } from '@ngxs/store';
 import { NgxsReduxDevtoolsPluginModule } from '@ngxs/devtools-plugin';
+import { EditContactComponent } from './edit-contact/edit-contact.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { NgxsReduxDevtoolsPluginModule } from '@ngxs/devtools-plugin';
     NavbarComponent,
     AddContactComponent,
     LoaderComponent,
+    EditContactComponent,
   ],
   imports: [
     BrowserModule,
